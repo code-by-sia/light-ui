@@ -4,13 +4,15 @@ import Action from "@/components/Action.vue";
 import Group from "@/components/Group.vue";
 import Spacer from "@/components/Spacer.vue";
 import Divider from "@/components/Divider.vue";
+import Panel from "@/components/Panel.vue";
 
 @Component({
   components: {
     Action,
     Group,
     Spacer,
-    Divider
+    Divider,
+    Panel
   }
 })
 export default class App extends Vue {}
@@ -38,30 +40,52 @@ export default class App extends Vue {}
       <strong>Item 5</strong>
     </Group>
 
-    <Group actions="true">
-      <Action>Bold</Action>
-      <Action>Italic</Action>
-      <Action>underline</Action>
+    <Group merged="true">
+      <Panel label="Group 1">
+        <Group merged="true">
+          <Action>Bold</Action>
+          <Divider />
+          <Action>Italic</Action>
+          <Divider />
+          <Action>underline</Action>
+        </Group>
+        <div
+          style="width:40px;height:40px;border:solid 2px red;margin:4px;"
+        ></div>
+      </Panel>
+      <Divider />
+      <Panel label="group 2">
+        <Group alignment="vertical" merged="true" style="width:100px;">
+          <action label="Open" />
+          <action label="Save" />
+          <action label="Reload" />
+        </Group>
+      </Panel>
+      <Panel label="Yad ayada" style="flex:1">
+        <group>
+          <Spacer />yada yada
+          <Spacer />
+        </group>
+      </Panel>
     </Group>
 
-    <Group alignment="vertical" actions="true" style="width:100px;">
-      <action label="Open" />
-      <action label="Save" />
-      <action label="Reload" />
-    </Group>
+    <panel label="Toolbox">yada yada</panel>
   </div>
 </template>
 
 <style lang="scss" scoped>
 body {
   display: flex;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #app {
   display: flex;
-  justify-items: center;
-
+  padding: 10px;
+  box-sizing: border-box;
+  > .light {
+    margin: 5px 0;
+  }
   span {
     border: solid thin mediumaquamarine;
     padding: 0 5px;
@@ -71,11 +95,6 @@ body {
     margin: 0 2px;
     padding: 2px 4px;
     background: lightblue;
-  }
-
-  span,
-  .light-group {
-    margin: 5px;
   }
 }
 </style>

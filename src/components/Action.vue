@@ -17,7 +17,7 @@ export default class Action extends Vue {
 }
 </script>
 <template>
-  <button class="light-action" :class="appereance" @click="onClick">
+  <button class="light-action light" :class="appereance" @click="onClick">
     <slot name="prepend" />
     <slot>{{ label }}</slot>
     <slot name="append" />
