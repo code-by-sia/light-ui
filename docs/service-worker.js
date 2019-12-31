@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/light-ui/precache-manifest.8b3146c8b0ea73bc37c7a51e79b60765.js"
+  "/light-ui/precache-manifest.d6ec4fea5cb60e1863013f265ae31388.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "light-ui"});
