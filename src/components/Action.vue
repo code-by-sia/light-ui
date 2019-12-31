@@ -9,7 +9,7 @@ export default class Action extends Vue {
   label!: string;
 
   @Prop({ default: "button" })
-  style!: string;
+  appereance!: string;
 
   onClick() {
     this.$emit("click");
@@ -17,7 +17,7 @@ export default class Action extends Vue {
 }
 </script>
 <template>
-  <button class="light-action" :class="style" @click="onClick">
+  <button class="light-action" :class="appereance" @click="onClick">
     <slot name="prepend" />
     <slot>{{ label }}</slot>
     <slot name="append" />
@@ -28,7 +28,6 @@ export default class Action extends Vue {
   &-action {
     border-radius: 2px;
     padding: 3px;
-    width: 100%;
     &.button {
       border: solid thin #ccc;
       background: linear-gradient(to top, #ece9e6, #ffffff);
