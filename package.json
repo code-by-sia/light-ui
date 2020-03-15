@@ -1,7 +1,7 @@
 {
   "name": "light-vui",
   "author": "Siamand(Cyaxares)",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/light-vui.common.js",
   "files": [
     "dist/*",
