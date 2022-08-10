@@ -4,9 +4,9 @@ a lightweight vuejs UI library
 
 example : 
 
-https://siamandmaroufi.github.io/OpenWebSheet
+https://code-by-sia.github.io/OpenWebSheet
 
-https://siamandmaroufi.github.io/OpenFork/
+https://code-by-sia.github.io/OpenFork/
 
 
 # how to install
